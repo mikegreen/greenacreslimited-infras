@@ -7,6 +7,15 @@ resource "cloudflare_record" "A_greenacreslimited" {
   value   = "69.163.155.199"
 }
 
+resource "cloudflare_record" "A_www_greenacreslimited" {
+  zone_id = cloudflare_zone.greenacreslimited.id
+  name    = "www"
+  type    = "A"
+  ttl     = "1"
+  proxied = "true"
+  value   = "69.163.155.199"
+}
+
 resource "cloudflare_record" "A_vault_greenacreslimited" {
   zone_id = cloudflare_zone.greenacreslimited.id
   name    = "vault"
