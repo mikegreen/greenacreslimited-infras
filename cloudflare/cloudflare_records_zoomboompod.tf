@@ -1,4 +1,4 @@
-resource "cloudflare_record" "C_zoomboompod" {
+resource "cloudflare_record" "C_email_zoomboompod" {
   zone_id = cloudflare_zone.zoomboompod.id
   name    = "email"
   type    = "CNAME"
