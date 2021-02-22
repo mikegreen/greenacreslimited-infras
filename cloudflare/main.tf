@@ -1,6 +1,6 @@
 terraform {
   backend "remote" {
-    hostname = "app.terraform.io"
+    hostname     = "app.terraform.io"
     organization = "greenacreslimited"
 
     workspaces {
@@ -9,18 +9,23 @@ terraform {
   }
   required_providers {
     cloudflare = {
-      source = "cloudflare/cloudflare"
+      source  = "cloudflare/cloudflare"
       version = "~> 2.0"
     }
   }
 }
 
-provider "cloudflare" { 
+provider "cloudflare" {
 }
 
 
 resource "cloudflare_zone" "greenacreslimited" {
   zone = "greenacreslimited.com"
+  type = "full"
+}
+
+resource "cloudflare_zone" "zoomboompod" {
+  zone = "zoomboompod.com"
   type = "full"
 }
 
