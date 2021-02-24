@@ -22,7 +22,7 @@ resource "cloudflare_record" "A_vault_greenacreslimited" {
   type    = "A"
   ttl     = "1"
   proxied = "false"
-  value   = "75.166.32.140"
+  value   = "75.166.19.50"
 }
 
 resource "cloudflare_record" "A_vault-pr_greenacreslimited" {
