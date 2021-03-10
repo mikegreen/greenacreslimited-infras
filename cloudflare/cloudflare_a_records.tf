@@ -33,3 +33,12 @@ resource "cloudflare_record" "A_vault-pr_greenacreslimited" {
   proxied = "true"
   value   = "18.223.119.112"
 }
+
+resource "cloudflare_record" "webmail_greenacreslimited" {
+  zone_id = cloudflare_zone.greenacreslimited.id
+  name    = "webmail"
+  type    = "A"
+  ttl     = "1"
+  proxied = "true"
+  value   = "69.163.136.138"
+}
