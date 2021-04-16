@@ -30,7 +30,7 @@ resource "cloudflare_record" "A_vault-pr_greenacreslimited" {
   name    = "vault-pr"
   type    = "A"
   ttl     = "1"
-  proxied = "true"
+  proxied = "false"
   value   = "18.223.119.112"
 }
 
