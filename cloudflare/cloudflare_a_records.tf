@@ -58,5 +58,5 @@ resource "cloudflare_record" "C_webodm_greenacreslimited" {
   type    = "CNAME"
   ttl     = "1"
   proxied = "true"
-  value   = "vault.greenacreslimited.com"
+  value   = "valheim.greenacreslimited.com"
 }
