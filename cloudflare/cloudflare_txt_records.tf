@@ -4,7 +4,7 @@ resource "cloudflare_record" "TXT_spf_greenacreslimited" {
   type    = "TXT"
   ttl     = "1"
   proxied = "false"
-  value   = "v=spf1 mx include:netblocks.dreamhost.com ~all"
+  value   = "v=spf1 mx include:_spf.google.com include:netblocks.dreamhost.com ~all"
 }
 
 resource "cloudflare_record" "TXT_google_verif_greenacreslimited" {
