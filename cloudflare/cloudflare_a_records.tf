@@ -55,8 +55,8 @@ resource "cloudflare_record" "A_server-12j9xx1_greenacreslimited" {
 resource "cloudflare_record" "C_webodm_greenacreslimited" {
   zone_id = cloudflare_zone.greenacreslimited.id
   name    = "webodm"
-  type    = "CNAME"
+  type    = "A"
   ttl     = "1"
   proxied = "true"
-  value   = "valheim.greenacreslimited.com"
+  value   = var.cl_dynamic_ip
 }
