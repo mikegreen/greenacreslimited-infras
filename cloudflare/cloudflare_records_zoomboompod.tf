@@ -49,7 +49,7 @@ resource "cloudflare_record" "SRV__autodiscover_tcp" {
   zone_id = cloudflare_zone.zoomboompod.id
   name    = "_autodiscover._tcp"
   type    = "SRV"
-  data = {
+  data {
     service  = "_autodiscover"
     proto    = "_tcp"
     name     = "zoomboompod.com"
