@@ -25,15 +25,6 @@ resource "cloudflare_record" "A_vault_greenacreslimited" {
   value   = var.cl_dynamic_ip
 }
 
-resource "cloudflare_record" "webmail_greenacreslimited" {
-  zone_id = cloudflare_zone.greenacreslimited.id
-  name    = "webmail"
-  type    = "A"
-  ttl     = "1"
-  proxied = "true"
-  value   = "69.163.136.138"
-}
-
 resource "cloudflare_record" "A_server-12j9xx1_greenacreslimited" {
   zone_id = cloudflare_zone.greenacreslimited.id
   name    = "server-12j9xx1"
