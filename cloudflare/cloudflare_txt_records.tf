@@ -1,6 +1,6 @@
 resource "cloudflare_record" "TXT_spf_greenacreslimited" {
   zone_id = cloudflare_zone.greenacreslimited.id
-  name    = "greenacreslimited.com"
+  name    = cloudflare_zone.greenacreslimited.zone
   type    = "TXT"
   ttl     = "1"
   proxied = "false"
@@ -9,7 +9,7 @@ resource "cloudflare_record" "TXT_spf_greenacreslimited" {
 
 resource "cloudflare_record" "TXT_google_verif_greenacreslimited" {
   zone_id = cloudflare_zone.greenacreslimited.id
-  name    = "greenacreslimited.com"
+  name    = cloudflare_zone.greenacreslimited.zone
   type    = "TXT"
   ttl     = "1"
   proxied = "false"
