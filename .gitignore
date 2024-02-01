@@ -29,3 +29,4 @@ override.tf.json
 # example: *tfplan*
 cloudflare/.DS_Store
 .DS_Store
+cloudflare/.terraform.lock.hcl
