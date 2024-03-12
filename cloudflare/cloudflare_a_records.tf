@@ -1,6 +1,6 @@
 resource "cloudflare_record" "A_greenacreslimited" {
   zone_id = cloudflare_zone.greenacreslimited.id
-  name    = "greenacreslimited.com"
+  name    = cloudflare_zone.greenacreslimited.zone
   type    = "A"
   ttl     = "1"
   proxied = "true"
