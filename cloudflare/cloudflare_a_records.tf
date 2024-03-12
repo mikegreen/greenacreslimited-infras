@@ -43,7 +43,7 @@ resource "cloudflare_record" "C_webodm_greenacreslimited" {
   value   = var.cl_dynamic_ip
 }
 
-resource "cloudflare_record" "C_webodm_greenacreslimited" {
+resource "cloudflare_record" "A_redis-dev_greenacreslimited" {
   zone_id = cloudflare_zone.greenacreslimited.id
   name    = "redis-dev"
   type    = "A"
