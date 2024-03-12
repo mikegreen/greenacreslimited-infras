@@ -42,3 +42,12 @@ resource "cloudflare_record" "C_webodm_greenacreslimited" {
   proxied = "true"
   value   = var.cl_dynamic_ip
 }
+
+resource "cloudflare_record" "C_webodm_greenacreslimited" {
+  zone_id = cloudflare_zone.greenacreslimited.id
+  name    = "redis-dev"
+  type    = "A"
+  ttl     = "1"
+  proxied = "true"
+  value   = var.cl_dynamic_ip
+}
